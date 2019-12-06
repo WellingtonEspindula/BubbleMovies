@@ -1,0 +1,120 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/datastructures/hash.h
+algorithm
+-
+bits/stdc++.h
+-
+../../source/datastructures/hash.ipp
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/source/datastructures/hash.ipp
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/datastructures/tst.h
+algorithm
+-
+bits/stdc++.h
+-
+../../header/utils/stringHashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/stringHashable.h
+../../header/utils/utils.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/utils.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/comparable.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/hashable.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/movie.h
+algorithm
+-
+bits/stdc++.h
+-
+../../header/model/rating.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/rating.h
+../../header/model/user.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/user.h
+../../header/utils/stringHashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/stringHashable.h
+../../header/utils/intHC.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/intHC.h
+../../header/utils/utils.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/utils.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/rating.h
+algorithm
+-
+bits/stdc++.h
+-
+../../header/utils/stringHashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/stringHashable.h
+../../header/utils/intHC.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/intHC.h
+../../header/utils/utils.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/utils.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/user.h
+algorithm
+-
+bits/stdc++.h
+-
+../../header/model/rating.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/rating.h
+../../header/model/movie.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/movie.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/intHC.h
+algorithm
+-
+bits/stdc++.h
+-
+../../header/interfaces/comparable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/comparable.h
+../../header/interfaces/hashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/hashable.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/stringHashable.h
+algorithm
+-
+bits/stdc++.h
+-
+../../header/interfaces/comparable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/comparable.h
+../../header/interfaces/hashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/hashable.h
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/utils.h
+algorithm
+-
+bits/stdc++.h
+-
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/source/datastructures/hash.ipp
+
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/source/main.cpp
+algorithm
+-
+bits/stdc++.h
+-
+../header/model/rating.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/rating.h
+../header/model/user.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/user.h
+../header/model/movie.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model/movie.h
+../header/interfaces/comparable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/comparable.h
+../header/interfaces/hashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces/hashable.h
+../header/datastructures/hash.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/datastructures/hash.h
+../header/datastructures/tst.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/datastructures/tst.h
+../header/utils/stringHashable.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/stringHashable.h
+../header/utils/utils.h
+/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils/utils.h
+
