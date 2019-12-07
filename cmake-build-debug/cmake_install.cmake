@@ -1,4 +1,4 @@
-# Install script for directory: /home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies
+# Install script for directory: /home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

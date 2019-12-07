@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header" -I"/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/datastructures" -I"/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/interfaces" -I"/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/model" -I"/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/header/utils" -I"/home/Desktop/Projetos GITHUB/Graduacao/Bubble-Movies/source" 
+CXX_INCLUDES = -I"/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header" -I"/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures" -I"/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces" -I"/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model" -I"/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/utils" -I"/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source" 
 

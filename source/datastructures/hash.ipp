@@ -17,6 +17,7 @@ template<class K, class V>
 HashTable<K, V>::HashTable(int table_size){
     size = table_size;
     collision_count = 0;
+    elements_count = 0;
     entries = new list<Pair<K, V>>[table_size];
 }
 

@@ -48,64 +48,40 @@ int main(int argc, char ** argv){
     clock_t start, end;
     start = clock();
 
-    // Hashtable tests
-//     vector<pair<string, string>> names = readFileToPairVector("../nomes_10000.txt");
-//     vector<string> search_names = readFileToStringVector(argv[2]);
-//
-//     HashTable<StringHashable, string> *hashTable = new HashTable<StringHashable, string>(2477);
-//     for (pair<string, string> name : names){
-//         StringHashable key(name.first);
-//         string value = name.second;
-//
-////         cout << key << " " << value << endl;
-//
-//         hashTable->insert(pair<StringHashable, string>(key, value));
-////         hs.insert(name);
-//     }
-//     hashTable->show();
-
-     // Populate movies
-//    vector<string> movie_lines = readFileToStringVector("../Dados/movie.csv");
-//    cout << movie_lines.at(1) << endl;
-//    Movie *movie1 = new Movie(movie_lines.at(1));
-//    cout << movie1->movieId << endl;
-//    cout << movie1->title << endl;
-//    for (string genre : movie1->genres)
-//        cout << genre << " ";
-//    cout << endl;
+     // Need 3 args to start the program
+     if (argc < 2){
+         printf("Missing arguments.\nEx.: ./bubblemovies movies.csv rating.csv tag.csv\n");
+         return EXIT_FAILURE;
+     }
 
     // Populate movie HashTable
-//    vector<string> movie_lines = readFileToStringVector("../Dados/movie.csv");
-//    auto *movieHT = new HashTable<IntHC, Movie>(6997);
-//
-//    for (int i = 1; i < movie_lines.size(); i++){
-//        Movie *movie = new Movie(movie_lines.at(i));
-//        IntHC movieId = IntHC(movie->movieId);
-//        movieHT->insert(movieId, movie);
-//    }
-//
-//    movieHT->show();
-
-    // Populate movie HashTable
-    vector<string> movie_lines = readFileToStringVector("Dados/movie.csv");
     HashTable<IntHC, Movie> *movieHT = new HashTable<IntHC, Movie>(6997);
     TST *movieTST = new TST();
 
-    for (int i = 1; i < movie_lines.size(); i++){
-        Movie *movie = new Movie(movie_lines.at(i));
-        IntHC movieId = IntHC(movie->movieId);
+    ifstream file = ifstream(argv[1]);
+    if (file.is_open()) {
+        string word;                   // line buffer
+        getline(file, word);    // jumps the first line
+        while (!file.eof()) {
+            getline(file, word);    // get the line
 
-        movieHT->insert(movieId, movie);
-        movieTST->insert(movie->title, movie->movieId);
+            if (word.length() != 0) {
+                Movie *movie = new Movie(word); // create a Movie based on csv line
+                IntHC movieId = IntHC(movie->movieId);  // id hashable and comparable
+
+                movieHT->insert(movieId, movie);
+                movieTST->insert(movie->title, movie->movieId);
+            }
+        }
+        file.close();
     }
-
     movieHT->show_info();
     // movieTST->show();
 
     // Populate User HashTable
     auto *userHT = new HashTable<IntHC, User>(140009);
 
-    ifstream file ("Dados/rating.csv");
+    file = ifstream(argv[2]);
     if (file.is_open()){
         string word;
         getline(file, word);
@@ -114,7 +90,7 @@ int main(int argc, char ** argv){
             if (word.length() != 0) {
                 // Here we populate the User on UserHT
                 Rating *rating = new Rating(word);
-                IntHC userId = IntHC(rating->movieId);
+                IntHC userId = IntHC(rating->userId);
 
                 // verify if the user already exists
                 User *user = userHT->get(userId);
@@ -127,7 +103,7 @@ int main(int argc, char ** argv){
                     userHT->insert(userId, user);
                 }
 
-                // verify if the user already exists
+                // verify if the movie exists
                 Movie *movie = movieHT->get(rating->movieId);
                 if (movie != nullptr){
                     movie->addRating(*rating);
