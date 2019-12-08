@@ -57,9 +57,22 @@ include CMakeFiles/Bubble_Movies.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Bubble_Movies.dir/flags.make
 
+CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
+CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o: ../source/utils/stringHashable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp"
+
+CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp" > CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.i
+
+CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp" -o CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.s
+
 CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
 CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o: ../source/datastructures/tst.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/tst.cpp"
 
 CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.s: cmake_force
 
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../source/model/movie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.cpp"
 
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.s: cmake_force
 
 CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
 CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o: ../source/model/rating.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.cpp"
 
 CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.s: cmake_force
 
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../source/model/user.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp"
 
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.i: cmake_force
@@ -108,19 +121,6 @@ CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.i: cmake_force
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp" -o CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.s
-
-CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
-CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o: ../source/utils/stringHashable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp"
-
-CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp" > CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.i
-
-CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp" -o CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.s
 
 CMakeFiles/Bubble_Movies.dir/source/utils/utils.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
 CMakeFiles/Bubble_Movies.dir/source/utils/utils.cpp.o: ../source/utils/utils.cpp
@@ -161,31 +161,46 @@ CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/intHC.cpp" -o CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.s
 
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: CMakeFiles/Bubble_Movies.dir/flags.make
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../source/model/tag.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o -c "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp"
+
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp" > CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.i
+
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp" -o CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.s
+
 # Object files for target Bubble_Movies
 Bubble_Movies_OBJECTS = \
+"CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o" \
 "CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o" \
 "CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o" \
 "CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o" \
 "CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o" \
-"CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o" \
 "CMakeFiles/Bubble_Movies.dir/source/utils/utils.cpp.o" \
 "CMakeFiles/Bubble_Movies.dir/source/main.cpp.o" \
-"CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.o"
+"CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.o" \
+"CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o"
 
 # External object files for target Bubble_Movies
 Bubble_Movies_EXTERNAL_OBJECTS =
 
+Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/datastructures/tst.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o
-Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/utils/utils.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/main.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.o
+Bubble_Movies: CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/build.make
 Bubble_Movies: CMakeFiles/Bubble_Movies.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Bubble_Movies"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Bubble_Movies"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bubble_Movies.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

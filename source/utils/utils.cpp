@@ -151,10 +151,15 @@ vector<string> split_csv(string str, char sep){
         if ((c == sep) && (!isUnderQuotationMarks) &&(!current.empty())){
             strings.push_back(current);
             current.clear();
-        } else if (c == '\"'){
+        } else if ((c == '\"') && (current.back() != '\\')){
             isUnderQuotationMarks = !isUnderQuotationMarks;
         } else {
-            current += c;
+            if ((c == '\"') && (current.back() == '\\')){
+                current.pop_back();
+                current += '\"';
+            } else{
+                current += c;
+            }
         }
     }
 

@@ -231,6 +231,33 @@ source/model/rating.cpp.s:
 	$(MAKE) -f CMakeFiles/Bubble_Movies.dir/build.make CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.s
 .PHONY : source/model/rating.cpp.s
 
+source/model/tag.o: source/model/tag.cpp.o
+
+.PHONY : source/model/tag.o
+
+# target to build an object file
+source/model/tag.cpp.o:
+	$(MAKE) -f CMakeFiles/Bubble_Movies.dir/build.make CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o
+.PHONY : source/model/tag.cpp.o
+
+source/model/tag.i: source/model/tag.cpp.i
+
+.PHONY : source/model/tag.i
+
+# target to preprocess a source file
+source/model/tag.cpp.i:
+	$(MAKE) -f CMakeFiles/Bubble_Movies.dir/build.make CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.i
+.PHONY : source/model/tag.cpp.i
+
+source/model/tag.s: source/model/tag.cpp.s
+
+.PHONY : source/model/tag.s
+
+# target to generate assembly for a file
+source/model/tag.cpp.s:
+	$(MAKE) -f CMakeFiles/Bubble_Movies.dir/build.make CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.s
+.PHONY : source/model/tag.cpp.s
+
 source/model/user.o: source/model/user.cpp.o
 
 .PHONY : source/model/user.o
@@ -360,6 +387,9 @@ help:
 	@echo "... source/model/rating.o"
 	@echo "... source/model/rating.i"
 	@echo "... source/model/rating.s"
+	@echo "... source/model/tag.o"
+	@echo "... source/model/tag.i"
+	@echo "... source/model/tag.s"
 	@echo "... source/model/user.o"
 	@echo "... source/model/user.i"
 	@echo "... source/model/user.s"

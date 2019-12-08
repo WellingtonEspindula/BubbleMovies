@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/main.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/main.cpp.o"
   "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o"
   "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o"
+  "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o"
   "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o"
   "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/intHC.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/utils/intHC.cpp.o"
   "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp" "/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir/source/utils/stringHashable.cpp.o"

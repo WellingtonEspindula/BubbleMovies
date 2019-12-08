@@ -8,6 +8,7 @@
 #define MODELS
 #include "../../header/model/rating.h"
 #include "../../header/model/user.h"
+#include "../../header/model/tag.h"
 #endif
 
 #ifndef UTILS

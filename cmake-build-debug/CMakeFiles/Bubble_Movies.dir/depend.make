@@ -14,6 +14,7 @@ CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/interfaces/comparable.
 CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/interfaces/hashable.h
 CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/model/movie.h
 CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/model/rating.h
+CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/model/tag.h
 CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/model/user.h
 CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/utils/intHC.h
 CMakeFiles/Bubble_Movies.dir/source/main.cpp.o: ../header/utils/stringHashable.h
@@ -25,6 +26,7 @@ CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/interfaces/comp
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/interfaces/hashable.h
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/model/movie.h
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/model/rating.h
+CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/model/tag.h
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/model/user.h
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/utils/intHC.h
 CMakeFiles/Bubble_Movies.dir/source/model/movie.cpp.o: ../header/utils/stringHashable.h
@@ -39,10 +41,22 @@ CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o: ../header/utils/stringHa
 CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o: ../header/utils/utils.h
 CMakeFiles/Bubble_Movies.dir/source/model/rating.cpp.o: ../source/model/rating.cpp
 
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/interfaces/comparable.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/interfaces/hashable.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/model/movie.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/model/rating.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/model/tag.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/model/user.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/utils/intHC.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/utils/stringHashable.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../header/utils/utils.h
+CMakeFiles/Bubble_Movies.dir/source/model/tag.cpp.o: ../source/model/tag.cpp
+
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/interfaces/comparable.h
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/interfaces/hashable.h
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/model/movie.h
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/model/rating.h
+CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/model/tag.h
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/model/user.h
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/utils/intHC.h
 CMakeFiles/Bubble_Movies.dir/source/model/user.cpp.o: ../header/utils/stringHashable.h

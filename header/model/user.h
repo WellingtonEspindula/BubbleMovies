@@ -8,7 +8,9 @@
 #define MODELS
 #include "../../header/model/rating.h"
 #include "../../header/model/movie.h"
+#include "../../header/model/tag.h"
 #endif
+
 
 using namespace std;
 

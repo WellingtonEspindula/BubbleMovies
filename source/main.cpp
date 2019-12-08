@@ -9,6 +9,7 @@
 #include "../header/model/rating.h"
 #include "../header/model/user.h"
 #include "../header/model/movie.h"
+#include "../header/model/tag.h"
 #endif
 
 #ifndef INTERFACES
@@ -17,16 +18,16 @@
 #include "../header/interfaces/hashable.h"
 #endif
 
-#ifndef DATASTRUCTURES
-#define DATASTRUCTURES
-#include "../header/datastructures/hash.h"
-#include "../header/datastructures/tst.h"
-#endif
-
 #ifndef UTILS
 #define UTILS
 #include "../header/utils/stringHashable.h"
 #include "../header/utils/utils.h"
+#endif
+
+#ifndef DATASTRUCTURES
+#define DATASTRUCTURES
+#include "../header/datastructures/hash.h"
+#include "../header/datastructures/tst.h"
 #endif
 
 
@@ -43,8 +44,17 @@ void writeList(string fileName, vector<vector<int>> list);
 void writeList(string fileName, vector<string> list);
 void writeStats(string fileName, vector<string> strings, double time);
 
+void alert(string msg){
+    cout << msg << endl;
+}
 
 int main(int argc, char ** argv){
+//        TESTING SCRIPT OF CSV TRANSCRIPT
+//    vector<string> strings = split_csv("359,7442,\"Just Great. Now Every1 Knows Ewan Is \\\"\\\"Hooded\\\"\\\"\",2007-08-26 13:22:31", ',');
+//    for (string s : strings)
+//        cout << s << endl;
+
+    // PROJECT CODE
     clock_t start, end;
     start = clock();
 
@@ -54,7 +64,7 @@ int main(int argc, char ** argv){
          return EXIT_FAILURE;
      }
 
-    // Populate movie HashTable
+    // Populate Movie HashTable
     HashTable<IntHC, Movie> *movieHT = new HashTable<IntHC, Movie>(6997);
     TST *movieTST = new TST();
 
@@ -76,7 +86,7 @@ int main(int argc, char ** argv){
         file.close();
     }
     movieHT->show_info();
-    // movieTST->show();
+    movieTST->show_info();
 
     // Populate User HashTable
     auto *userHT = new HashTable<IntHC, User>(140009);
@@ -115,8 +125,39 @@ int main(int argc, char ** argv){
         }
         file.close();
     }
-
+    // show info
     userHT->show_info();
+
+    // Populate Tag HashTable
+    auto *tagHT = new HashTable<StringHashable, list<int>>(140009);
+
+    file = ifstream(argv[2]);
+    if (file.is_open()){
+        string word;
+        getline(file, word);
+        while(!file.eof()) {
+            getline(file, word);
+            if (word.length() != 0) {
+                // Here we populate the User on UserHT
+                Tag *tag = new Tag(word);
+                StringHashable stringTag = StringHashable(tag->tag);
+
+                // verify if the user already exists
+                list<int> *moviesPerTag = tagHT->get(stringTag);
+                if (moviesPerTag != nullptr){
+                    moviesPerTag->push_back(tag->movieId);
+                    tagHT->insert(stringTag, moviesPerTag);
+                } else {
+                    moviesPerTag = new list<int>();
+                    moviesPerTag->push_back(tag->movieId);
+                    tagHT->insert(stringTag, moviesPerTag);
+                }
+            }
+        }
+        file.close();
+    }
+    // show info
+    tagHT->show_info();
 
     end = clock();
     double time = (end - start)/(double)CLOCKS_PER_SEC;

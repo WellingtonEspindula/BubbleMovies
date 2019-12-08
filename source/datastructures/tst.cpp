@@ -43,10 +43,9 @@ bool TST::insert(string str, int id) {
     if (str.empty()){
         return false;
     }
-    // TODO
-//    if (!exists(str)){  // verify if this element already exists in the tst
-//        size++;
-//    }
+    if (!exists(str)){  // verify if this element already exists in the tst
+        size++;
+    }
 
     this->root = Insert_Movie(this->root, str, id, 0);
     return true;
@@ -101,6 +100,19 @@ void Aux_Function(Node *root, char *buffer, int depth) {
 void TST::show() {
     char buffer[MAX_LEN];
     Aux_Function(this->root, buffer, 0);
+}
+
+// Function to print TST status
+void TST::show_info() {
+    cout << "\n" << endl;
+    cout << "-------------------------" << endl;
+    cout << "TST size: " << size << endl;
+    cout << "-------------------------" << endl;
+}
+
+bool TST::exists(string str) {
+    // TODO
+    return false;
 }
 
 

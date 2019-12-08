@@ -2,6 +2,9 @@
 
 #define P 257
 
+StringHashable::StringHashable(){
+}
+
 StringHashable::StringHashable(string s){
     this->assign(s);
 }

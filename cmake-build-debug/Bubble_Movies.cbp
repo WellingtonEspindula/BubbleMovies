@@ -114,6 +114,9 @@
 		<Unit filename="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model/rating.h">
 			<Option target="Bubble_Movies"/>
 		</Unit>
+		<Unit filename="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model/tag.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
 		<Unit filename="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model/user.h">
 			<Option target="Bubble_Movies"/>
 		</Unit>
@@ -139,6 +142,9 @@
 			<Option target="Bubble_Movies"/>
 		</Unit>
 		<Unit filename="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp">
 			<Option target="Bubble_Movies"/>
 		</Unit>
 		<Unit filename="/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp">

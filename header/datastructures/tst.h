@@ -47,6 +47,11 @@ public:
      */
     void show();
 
+    /** \brief Prints stats about TST
+     *
+     */
+    void show_info();
+
     /** \brief Used in Print_All_Movies
      *
      */
@@ -57,8 +62,7 @@ public:
      */
 //    int search(char* pattern);
 
-//    TODO
-//    bool exists(string str);
+    bool exists(string str);
 };
 
 #endif

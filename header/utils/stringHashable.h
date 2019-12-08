@@ -14,6 +14,8 @@ using namespace std;
 
 class StringHashable : public string, public Hashable, public Comparable<StringHashable> {
 public:
+    StringHashable();
+
     StringHashable(string s);
 
     /** \brief Compare this string with an string entered.
