@@ -23,7 +23,7 @@ public:
     int size;
     int elements_count;
     int collision_count;
-    list<Pair<K, V>> *entries;
+    list<Pair<K, V>*> *entries;
 
     /**
      * \brief Create a new hash table

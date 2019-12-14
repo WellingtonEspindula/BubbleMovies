@@ -142,21 +142,3 @@ bits/stdc++.h
 ../header/datastructures/tst.h
 /home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures/tst.h
 
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.cpp
-algorithm
--
-bits/stdc++.h
--
-../../header/model/movie.h
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model/movie.h
-
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp
-../../header/model/tag.h
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model/tag.h
-
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp
-bits/stdc++.h
--
-../../header/model/user.h
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/header/model/user.h
-

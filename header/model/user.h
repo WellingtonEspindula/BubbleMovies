@@ -17,10 +17,10 @@ using namespace std;
 class User {
     public:
         int userId;
-        list<Rating> ratings;
+        list<Rating*> ratings;
 
         User(int userId);
-        void addRating(Rating rating);
+        void addRating(Rating* rating);
         friend ostream& operator<<(ostream& os, const User& dt);
 };
 

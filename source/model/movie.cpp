@@ -28,9 +28,9 @@ void Movie::addGenres(string genre){
     this->genres.push_back(genre);
 }
 
-void Movie::addRating(Rating rating){
+void Movie::addRating(Rating* rating){
     ratings_count++;
-    ratings_sum += rating.rating;
+    ratings_sum += rating->rating;
 }
 
 void Movie::fromCsv(string movie_csv) {

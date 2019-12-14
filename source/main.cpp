@@ -31,6 +31,12 @@
 #endif
 
 
+#define MOVIE_HASH_SIZE 6997
+#define GENRES_HASH_SIZE 41
+#define USER_HASH_SIZE 140009
+#define TAG_HASH_SIZE 140009
+
+
 #define M_CHAINING 2477
 #define M_EABQ 20123
 
@@ -54,19 +60,31 @@ int main(int argc, char ** argv){
 //    for (string s : strings)
 //        cout << s << endl;
 
+// TESTING TST
+//    TST *testTST = new TST();
+//    testTST->insert("abcd", 3);
+//    testTST->insert("oii", 2);
+//    testTST->insert("a", 10);
+//    cout << testTST->exists("abc") << endl;
+//    cout << testTST->exists("abcd") << endl;
+//    cout << testTST->exists("oii") << endl;
+//    cout << testTST->exists("a") << endl;
+//    cout << testTST->exists("ab") << endl;
+
     // PROJECT CODE
     clock_t start, end;
     start = clock();
 
      // Need 3 args to start the program
-     if (argc < 2){
-         printf("Missing arguments.\nEx.: ./bubblemovies movies.csv rating.csv tag.csv\n");
+     if (argc < 3){
+         alert("Missing arguments.\nEx.: ./bubblemovies movies.csv rating.csv tag.csv\n");
          return EXIT_FAILURE;
      }
 
     // Populate Movie HashTable
-    HashTable<IntHC, Movie> *movieHT = new HashTable<IntHC, Movie>(6997);
+    HashTable<IntHC, Movie> *movieHT = new HashTable<IntHC, Movie>(MOVIE_HASH_SIZE);
     TST *movieTST = new TST();
+    auto *genres = new HashTable<StringHashable, vector<int>>(GENRES_HASH_SIZE);
 
     ifstream file = ifstream(argv[1]);
     if (file.is_open()) {
@@ -80,6 +98,18 @@ int main(int argc, char ** argv){
                 IntHC movieId = IntHC(movie->movieId);  // id hashable and comparable
 
                 movieHT->insert(movieId, movie);
+                for (string genre : movie->genres){
+                    StringHashable genreSH(clear_string(genre));
+                    vector<int> *genreFromHT = genres->get(genreSH);
+
+                    if (genreFromHT == nullptr){
+                        genreFromHT = new vector<int>();
+                        genreFromHT->push_back(movie->movieId);
+                    } else {
+                        genreFromHT->push_back(movie->movieId);
+                    }
+                    genres->insert(genreSH, genreFromHT);
+                }
                 movieTST->insert(movie->title, movie->movieId);
             }
         }
@@ -87,9 +117,10 @@ int main(int argc, char ** argv){
     }
     movieHT->show_info();
     movieTST->show_info();
+    genres->show_info();
 
     // Populate User HashTable
-    auto *userHT = new HashTable<IntHC, User>(140009);
+    auto *userHT = new HashTable<IntHC, User>(USER_HASH_SIZE);
 
     file = ifstream(argv[2]);
     if (file.is_open()){
@@ -105,18 +136,18 @@ int main(int argc, char ** argv){
                 // verify if the user already exists
                 User *user = userHT->get(userId);
                 if (user != nullptr){
-                    user->addRating(*rating);
+                    user->addRating(rating);
                     userHT->insert(userId, user);
                 } else {
                     user = new User(userId.i);
-                    user->addRating(*rating);
+                    user->addRating(rating);
                     userHT->insert(userId, user);
                 }
 
                 // verify if the movie exists
                 Movie *movie = movieHT->get(rating->movieId);
                 if (movie != nullptr){
-                    movie->addRating(*rating);
+                    movie->addRating(rating);
                     movieHT->insert(movie->movieId, movie);
                 } else {
                     cout << "Movie doesn't exists on Movie HashTable" << endl;
@@ -129,20 +160,20 @@ int main(int argc, char ** argv){
     userHT->show_info();
 
     // Populate Tag HashTable
-    auto *tagHT = new HashTable<StringHashable, list<int>>(140009);
+    auto *tagHT = new HashTable<StringHashable, list<int>>(TAG_HASH_SIZE);
 
-    file = ifstream(argv[2]);
+    file = ifstream(argv[3]);
     if (file.is_open()){
         string word;
         getline(file, word);
         while(!file.eof()) {
             getline(file, word);
             if (word.length() != 0) {
-                // Here we populate the User on UserHT
+                // Here we populate the Tag on TagHT
                 Tag *tag = new Tag(word);
                 StringHashable stringTag = StringHashable(tag->tag);
 
-                // verify if the user already exists
+                // verify if the movie already exists
                 list<int> *moviesPerTag = tagHT->get(stringTag);
                 if (moviesPerTag != nullptr){
                     moviesPerTag->push_back(tag->movieId);
@@ -164,6 +195,28 @@ int main(int argc, char ** argv){
     cout << "Time elapsed: " << time << " s" << endl;
 
 
+    while (true){
+        string query;
+        cout << "\nQuery: ";
+        cin >> query;
+
+        // Query treatment
+        vector<string> query_segments = split(query, " ");
+        string op = query_segments.at(0);
+        if (op == "movie"){
+            // TODO search on Movie Trie
+        } else if (op == "user"){
+            // TODO
+        } else if (op.find("top") != string::npos){
+            // TODO
+
+        } else if (op == "tags"){
+            // TODO
+
+        } else {
+            alert("Operation not found!\nHelp commands:\n- movie <title or prefix>\n- user <userID>\n- top<N> '<genre>'\n- tags <list of tags>");
+        }
+    }
 
 
 //     cout << hashTable->get((string) "Reign") << endl;

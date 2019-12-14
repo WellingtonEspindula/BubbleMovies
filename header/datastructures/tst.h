@@ -52,17 +52,16 @@ public:
      */
     void show_info();
 
-    /** \brief Used in Print_All_Movies
-     *
+    /** \brief Verify if the string exists in the TST
+     * \param str - string to be searched
      */
-//    void Aux_Function(char* buffer, int depth);
+    bool exists(string str);
 
     /** \brief Search for a title in TST
-     * \param pattern - string to be searched for
-     */
-//    int search(char* pattern);
-
-    bool exists(string str);
+    * \param pattern - string to be searched for
+    * \return a vector of tuples <string, int> with same prefix
+    */
+    vector<pair<string, int>> search(string pattern);
 };
 
 #endif

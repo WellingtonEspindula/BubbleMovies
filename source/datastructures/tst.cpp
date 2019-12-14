@@ -52,26 +52,25 @@ bool TST::insert(string str, int id) {
 }
 
 
-bool Search_For(Node *root, char *pattern) {
+int Search_For(Node *root, string word) {
+    int d = 0;
     while (root != NULL) {
-
         //Searches for the character in the tree
         //Checks if the character's value is greater than the value stored in this node
-        if (*pattern < root->character)
+        if (word.at(d) < root->character){
             root = root->left;
-
-
-        else if (*pattern == root->character) {
-            //If end of string flag is found and the pattern length is also exhausted,
-            //we can safely say that the pattern is present in the TST
-            if (root->id && *(pattern + 1) == '\0')
-                return true;
-            pattern++;
+        } else if (word.at(d) == root->character) {
+            //If end of string flag is found and the word length is also exhausted,
+            //we can safely say that the word is present in the TST
+            if (d < (word.length() - 1))
+                return root->id;
+            d++;
             root = root->eq;
-        } else
+        } else {
             root = root->right;
+        }
     }
-    return false;
+    return -1;
 }
 
 
@@ -111,9 +110,10 @@ void TST::show_info() {
 }
 
 bool TST::exists(string str) {
-    // TODO
-    return false;
+    // TODO Test this
+    return (Search_For(this->root, str) != -1);
 }
+
 
 
 

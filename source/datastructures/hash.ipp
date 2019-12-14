@@ -18,7 +18,7 @@ HashTable<K, V>::HashTable(int table_size){
     size = table_size;
     collision_count = 0;
     elements_count = 0;
-    entries = new list<Pair<K, V>>[table_size];
+    entries = new list<Pair<K, V>*>[table_size];
 }
 
 template<class K, class V>
@@ -31,13 +31,13 @@ template<class K, class V>
 bool HashTable<K, V>::insert(K key, V *value){
     int hash_code = key.hashCode(size);
 
-    list<Pair<K, V>> entry_list = entries[hash_code];
+    list<Pair<K, V>*> entry_list = entries[hash_code];
 
-    auto element = Pair<K, V>(key, value);
+    auto element = new Pair<K, V>(key, value);
 
     // Verify if the value is already there
-    for(Pair<K, V> entry : entry_list){
-        if ((entry.first).compare(key) == 0) {
+    for(Pair<K, V>* entry : entry_list){
+        if ((entry->first).compare(key) == 0) {
             entry_list.remove(entry);
             entry_list.push_back(element);
             entries[hash_code] = entry_list;
@@ -60,11 +60,11 @@ V* HashTable<K, V>::get(K key){
     int hash_code = key.hashCode(size);
 
     // Search through the aux vector
-    list<Pair<K, V>> entry_list = entries[hash_code];
+    list<Pair<K, V>*> entry_list = entries[hash_code];
 
-    for (auto entry : entry_list){
-        if (entry.first.compare(key) == 0){
-            return entry.second;
+    for (Pair<K, V>* entry : entry_list){
+        if (entry->first.compare(key) == 0){
+            return entry->second;
         }
     }
 
@@ -124,6 +124,19 @@ float HashTable<K, V>::occupancy_rate(){
     return ((float) occupancy/((float) size));
 }
 
+// Just in case hash store a vector in value field
+template <typename V>
+ostream& operator<<(ostream& output, vector<V> const& values)
+{
+    output << "[";
+    for (V const& value : values)
+    {
+        output << value << ";";
+    }
+    output << "]";
+    return output;
+}
+
 template<class K, class V>
 void HashTable<K, V>::show(){
     printf("-----------HEADER--------\n");
@@ -131,11 +144,11 @@ void HashTable<K, V>::show(){
     printf("-------------------------\n");
 
     for (int i = 0; i < size; i++){
-        list<Pair<K, V>> values = entries[i];
+        list<Pair<K, V>*> values = entries[i];
 
         cout << "| " ;
         for (auto name : values){
-            cout << name.first << ":" << *(name.second) << ";";
+            cout << name->first << ":" << *(name->second) <<";";
         }
         cout << " |"  << endl;
     }

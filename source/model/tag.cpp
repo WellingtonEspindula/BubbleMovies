@@ -15,6 +15,6 @@ Tag::Tag(string csv) {
 void Tag::fromCsv(string csv) {
 //    "userId","movieId","tag","timestamp"
     vector<string> entries = split_csv(csv, ',');
-    this->tag = entries.at(3);
-    this->movieId = stoi(entries.at(2));
+    this->tag = clear_string(entries.at(2));
+    this->movieId = stoi(entries.at(1));
 }

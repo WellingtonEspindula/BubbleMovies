@@ -27,14 +27,14 @@ class Movie {
         string title;
         vector<string> genres;
         int ratings_count;
-        unsigned long long int ratings_sum;
+        float ratings_sum;
     
     public:
         Movie();
         Movie(string csv);
         Movie(int movieId, string title, int ratings_count, unsigned long long int ratings_sum);
         void addGenres(string genre);
-        void addRating(Rating rating);
+        void addRating(Rating* rating);
         void fromCsv(string csv);
         friend ostream& operator<<(ostream& os, const Movie& dt);
 };
