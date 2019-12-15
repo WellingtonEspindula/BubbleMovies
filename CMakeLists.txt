@@ -11,7 +11,9 @@ include_directories(header/utils)
 include_directories(source)
 
 add_executable(Bubble_Movies
+        header/utils/intHC.h
         header/utils/stringHashable.h
+        header/utils/sort.h
         header/datastructures/hash.h
         header/datastructures/tst.h
         header/interfaces/comparable.h
@@ -20,7 +22,9 @@ add_executable(Bubble_Movies
         header/model/rating.h
         header/model/user.h
         header/utils/utils.h
+        source/utils/intHC.cpp
         source/utils/stringHashable.cpp
+        source/utils/sort.ipp
         source/datastructures/hash.ipp
         source/datastructures/tst.cpp
         source/model/movie.cpp

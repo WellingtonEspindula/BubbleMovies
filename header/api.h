@@ -25,7 +25,9 @@
 #ifndef UTILS
 #define UTILS
 #include "../header/utils/stringHashable.h"
+#include "../header/utils/intHC.h"
 #include "../header/utils/utils.h"
+#include "../header/utils/sort.h"
 #endif
 
 #ifndef DATASTRUCTURES
@@ -34,14 +36,13 @@
 #include "../header/datastructures/tst.h"
 #endif
 
-
 #ifndef BUBBLE_MOVIES_API_H
 #define BUBBLE_MOVIES_API_H
 
 typedef struct {
     HashTable<IntHC, Movie> *movieHT;
     TST *movieTST;
-    HashTable<StringHashable, vector<int>> *genres;
+    HashTable<StringHashable, vector<Movie*>> *genres;
     HashTable<IntHC, User> *userHT;
     HashTable<StringHashable, list<int>> *tagHT;
 } structures_handler;

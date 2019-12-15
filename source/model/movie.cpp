@@ -57,3 +57,28 @@ bool Movie::hasGenre(string genre){
     }
     return false;
 }
+
+float Movie::compare(Movie element) {
+    // TODO Maybe improve this method later
+    return this->globalRating() - element.globalRating();
+}
+
+bool Movie::operator==(const Movie &rhs) {
+    return this->compare(rhs) == 0;
+}
+
+bool Movie::operator>(const Movie &rhs) {
+    return this->compare(rhs) > 0;
+}
+
+bool Movie::operator>=(const Movie &rhs) {
+    return this->compare(rhs) >= 0;
+}
+
+bool Movie::operator<(const Movie &rhs) {
+    return this->compare(rhs) < 0;
+}
+
+bool Movie::operator<=(const Movie &rhs) {
+    return this->compare(rhs) <= 0;
+}

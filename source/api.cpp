@@ -25,7 +25,7 @@ structures_handler load(string movie_file, string ratings_file, string tag_file)
     // Populate Movie HashTable
     HashTable<IntHC, Movie> *movieHT = new HashTable<IntHC, Movie>(MOVIE_HASH_SIZE);
     TST *movieTST = new TST();
-    HashTable<StringHashable, vector<int>> *genres = new HashTable<StringHashable, vector<int>>(GENRES_HASH_SIZE);
+    HashTable<StringHashable, vector<Movie*>> *genres = new HashTable<StringHashable, vector<Movie*>>(GENRES_HASH_SIZE);
 
     ifstream file = ifstream(movie_file);
     if (file.is_open()) {
@@ -41,13 +41,13 @@ structures_handler load(string movie_file, string ratings_file, string tag_file)
                 movieHT->insert(movieId, movie);
                 for (string genre : movie->genres){
                     StringHashable genreSH(clear_string(genre));
-                    vector<int> *genreFromHT = genres->get(genreSH);
+                    vector<Movie*> *genreFromHT = genres->get(genreSH);
 
                     if (genreFromHT == nullptr){
-                        genreFromHT = new vector<int>();
-                        genreFromHT->push_back(movie->movieId);
+                        genreFromHT = new vector<Movie*>();
+                        genreFromHT->push_back(movie);
                     } else {
-                        genreFromHT->push_back(movie->movieId);
+                        genreFromHT->push_back(movie);
                     }
                     genres->insert(genreSH, genreFromHT);
                 }
@@ -170,6 +170,27 @@ void user_query(vector<string> query_segments, HashTable<IntHC, User> *userHT, H
     }
 }
 
+void top_genre_query(vector<string> query_segments, int n, HashTable<StringHashable, vector<Movie*>> *genres, HashTable<IntHC, Movie> *movieHT){
+    StringHashable genre = StringHashable(clear_string(query_segments.at(1)));
+    vector<Movie*> *movies = genres->get(genre);
+    vector<Movie*> movies_cleaned;
+//    printf("%d", movies->end());
+    // Keep Movies with, at least, 1000 rating
+    for (Movie *movie : (*movies)){
+        if (movie->ratings_count >= 1000)
+            movies_cleaned.push_back(movie);
+    }
+
+    insertion_sort<Movie>(&movies_cleaned[0], movies_cleaned.size());
+
+    cout << "SORTED LIST: " << endl;
+    for (int i = 0; i < n; i++){
+        Movie *movie = movies_cleaned.at(i);
+        cout << movie->title << " " << movie->globalRating() << endl;
+    }
+    // TODO
+}
+
 void tag_query(vector<string> query_segments, HashTable<StringHashable, list<int>> *tagHT, HashTable<IntHC, Movie> *movieHT){
     list<int> *moviesIds = tagHT->get(StringHashable(clear_string(query_segments.at(1))));
     list<int> selected_movies;
@@ -216,7 +237,8 @@ void query(structures_handler structures, string query){
         user_query(query_segments, structures.userHT, structures.movieHT);
 
     } else if (op.find("top") != string::npos){
-        // TODO
+        int top_n = stoi(op.substr(op.find("top")+3));
+        top_genre_query(query_segments, top_n, structures.genres, structures.movieHT);
 
     } else if (op == "tags"){
         tag_query(query_segments, structures.tagHT, structures.movieHT);

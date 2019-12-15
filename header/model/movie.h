@@ -11,17 +11,24 @@
 #include "../../header/model/tag.h"
 #endif
 
+#ifndef INTERFACES
+#define INTERFACES
+#include "../../header/interfaces/comparable.h"
+#include "../../header/interfaces/hashable.h"
+#endif
+
 #ifndef UTILS
 #define UTILS
 #include "../../header/utils/stringHashable.h"
 #include "../../header/utils/intHC.h"
 #include "../../header/utils/utils.h"
+#include "../../header/utils/sort.h"
 #endif
 
 
 using namespace std;
 
-class Movie {
+class Movie : Comparable<Movie> {
     public:
         int movieId;
         string title;
@@ -38,5 +45,12 @@ class Movie {
         float globalRating();
         bool hasGenre(string genre);
         void fromCsv(string csv);
+        float compare(Movie element) override ;
         friend ostream& operator<<(ostream& os, const Movie& dt);
+        bool operator==(const Movie& rhs);
+        bool operator>(const Movie& rhs);
+        bool operator>=(const Movie& rhs);
+        bool operator<(const Movie& rhs);
+        bool operator<=(const Movie& rhs);
+
 };

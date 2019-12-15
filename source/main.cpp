@@ -22,18 +22,42 @@ int main(int argc, char ** argv){
     cout << testTST->exists("ab") << endl;
 */
 
-    // PROJECT CODE
+   /* Movie *movieTst = new Movie();
+    movieTst->movieId = 1;
+    movieTst->title = "aaaa";
+    movieTst->genres.push_back("abc");
+    movieTst->genres.push_back("ddd");
+    movieTst->ratings_count = 3;
+    movieTst->ratings_sum = 10;
 
-    // LOADING DATA STRUCTURES
+    Movie *movieTst1 = new Movie();
+    movieTst1->movieId = 2;
+    movieTst1->title = "bbbb";
+    movieTst1->genres.push_back("abc");
+    movieTst1->genres.push_back("ddd");
+    movieTst1->ratings_count = 5;
+    movieTst1->ratings_sum = 20;
+
+    vector<Movie*> movies = vector<Movie*>();
+    movies.push_back(movieTst);
+    movies.push_back(movieTst1);
+
+    hybrid_sort<Movie>(&movies[0], movies.size());
+
+    for (Movie *moviee : movies)
+        cout << moviee->title << endl;
+
+    return 0;*/
 
     // Need 3 args to start the program
     if (argc < 3){
         alert("Missing arguments.\nEx.: ./bubblemovies movies.csv rating.csv tag.csv\n");
         return EXIT_FAILURE;
     }
+    // LOADING DATA STRUCTURES
     structures_handler structures = load(argv[1], argv[2], argv[3]);
 
-
+    // QUERIES
     while (true){
         string query_str;
         cout << "\nQuery: ";

@@ -19,7 +19,7 @@ int StringHashable::hashCode(int table_size){
     return hash;
 }
 
-int StringHashable::compare(StringHashable element) {
+float StringHashable::compare(StringHashable element) {
     return strcmp(this->c_str(), element.c_str());
 }
 

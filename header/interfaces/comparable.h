@@ -4,5 +4,5 @@ using namespace std;
 template <typename C>
 class Comparable{
 public:
-    virtual int compare(C element) = 0;
+    virtual float compare(C element) = 0;
 };

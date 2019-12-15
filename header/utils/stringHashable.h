@@ -22,7 +22,7 @@ public:
      * @param element String to be compared to.
      * @return Returns if this is string has the ASCII code greater than the @element ASCII
      */
-    int compare(StringHashable element) override;
+    float compare(StringHashable element) override;
 
     bool operator==(const StringHashable& rhs);
 
