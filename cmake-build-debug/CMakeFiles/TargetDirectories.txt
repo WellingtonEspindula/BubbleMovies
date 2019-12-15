@@ -1,3 +1,0 @@
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/Bubble_Movies.dir
-/home/Desktop/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-debug/CMakeFiles/edit_cache.dir

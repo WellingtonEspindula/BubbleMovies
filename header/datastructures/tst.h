@@ -21,10 +21,10 @@ using namespace std;
 class Node {
 public:
     char character;        // Actual data stored in form of character
-    int id = -1;                // flag marking end of string
-    struct Node* left;      // All character data less than this node
-    struct Node* eq;        // All character data equal to this node
-    struct Node* right;     // All character data greater than this node
+    int id = -1;           // flag marking end of string
+    struct Node* left;     // All character data less than this node
+    struct Node* eq;       // All character data equal to this node
+    struct Node* right;    // All character data greater than this node
 
 };
 
@@ -62,6 +62,8 @@ public:
     * \return a vector of tuples <string, int> with same prefix
     */
     vector<pair<string, int>> search(string pattern);
+
+    int get(string str);
 };
 
 #endif

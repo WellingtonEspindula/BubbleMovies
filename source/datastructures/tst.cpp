@@ -8,7 +8,7 @@ TST::TST() {
 }
 
 Node* Insert_Movie(Node* root, string str, int id, int d){
-    if(root == NULL){
+    if (root == NULL){
         root = new Node();
 
         //Insert first character of string in the root node
@@ -62,7 +62,7 @@ int Search_For(Node *root, string word) {
         } else if (word.at(d) == root->character) {
             //If end of string flag is found and the word length is also exhausted,
             //we can safely say that the word is present in the TST
-            if (d < (word.length() - 1))
+            if (d == (word.length() - 1))
                 return root->id;
             d++;
             root = root->eq;
@@ -83,7 +83,7 @@ void Aux_Function(Node *root, char *buffer, int depth) {
         //Once end of string flag is encountered, print the string
         if (root->id != -1) {
             buffer[depth + 1] = '\0';
-            cout << buffer << endl;
+            cout << buffer << ":" << root->id << endl;
         }
 
         // Traverse the middle subtree
@@ -110,17 +110,11 @@ void TST::show_info() {
 }
 
 bool TST::exists(string str) {
-    // TODO Test this
+    str = clear_string(str);
     return (Search_For(this->root, str) != -1);
 }
 
-
-
-
-
-
-
-
-
-
-
+int TST::get(string str){
+    str = clear_string(str);
+    return Search_For(this->root, str);
+}
