@@ -9,6 +9,8 @@ Tag::Tag() {
 }
 
 Tag::Tag(string csv) {
+    this->movieId = -1;
+    this->tag = "";
     fromCsv(csv);
 }
 

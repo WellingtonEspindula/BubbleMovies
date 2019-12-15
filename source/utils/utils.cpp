@@ -170,6 +170,34 @@ vector<string> split_csv(string str, char sep){
     return strings;
 }
 
+vector<string> split_query(string str, char sep){
+    vector<string> strings;
+    string current;
+    bool isUnderQuotationMarks = false;
+
+    for (char c : str){
+        if ((c == sep) && (!isUnderQuotationMarks) &&(!current.empty())){
+            strings.push_back(current);
+            current.clear();
+        } else if ((c == '\'') && (current.back() != '\\')){
+            isUnderQuotationMarks = !isUnderQuotationMarks;
+        } else {
+            if ((c == '\"') && (current.back() == '\\')){
+                current.pop_back();
+                current += '\"';
+            } else{
+                current += c;
+            }
+        }
+    }
+
+    if (!current.empty()){
+        strings.push_back(current);
+    }
+
+    return strings;
+}
+
 string remove_quotation_marks(string in){
     in.erase(remove(in.begin(), in.end(), '\"'), in.end());
     return in;
@@ -282,4 +310,13 @@ string clear_string(string in){
     }
 
     return new_str;
+}
+
+bool contains(list<int> list, int value){
+    for (int element : list){
+        if (element == value){
+            return true;
+        }
+    }
+    return false;
 }

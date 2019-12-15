@@ -27,7 +27,7 @@ public:
 
     IntHC(int i);
 
-    int compare(IntHC element) override ;
+    float compare(IntHC element) override ;
 
     bool operator==(const IntHC& rhs);
     friend ostream& operator<<(ostream& os, const IntHC& dt);

@@ -63,6 +63,16 @@ int fibonacci_sequence(int n);
 // TODO DOC THIS
 vector<string> split(string str, string sep);
 vector<string> split_csv(string str, char sep);
+vector<string> split_query(string str, char sep);
+
+
+/*** Checks if element exists in a list
+ * @param list - list itself
+ * @param value - value to be searched for
+ * @return true if found, false otherwise
+ */
+bool contains(list<int> list, int value);
+
 // DEPRECATED
 //string remove_quotation_marks(string in);
 

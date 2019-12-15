@@ -13,10 +13,13 @@ Movie::Movie(){
 }
 
 Movie::Movie(string csv){
+    this->genres = vector<string>();
+    this->ratings_count = 0;
+    this->ratings_sum = 0;
     fromCsv(csv);
 }
 
-Movie::Movie(int movieId, string title, int ratings_count, unsigned long long int ratings_sum){
+Movie::Movie(int movieId, string title, int ratings_count, float ratings_sum){
     this->movieId = movieId;
     this->title = title;
     this->genres = vector<string>();
@@ -43,4 +46,42 @@ void Movie::fromCsv(string movie_csv) {
 
 ostream& operator<<(ostream& os, const Movie& dt){
     return os << dt.title;
+}
+
+float Movie::globalRating() {
+    return ratings_sum/ratings_count;
+}
+
+bool Movie::hasGenre(string genre){
+    for (string movie_genre : genres){
+        if (clear_string(movie_genre) == genre){
+            return true;
+        }
+    }
+    return false;
+}
+
+float Movie::compare(Movie element) {
+    // TODO Maybe improve this method later
+    return this->globalRating() - element.globalRating();
+}
+
+bool Movie::operator==(const Movie &rhs) {
+    return this->compare(rhs) == 0;
+}
+
+bool Movie::operator>(const Movie &rhs) {
+    return this->compare(rhs) > 0;
+}
+
+bool Movie::operator>=(const Movie &rhs) {
+    return this->compare(rhs) >= 0;
+}
+
+bool Movie::operator<(const Movie &rhs) {
+    return this->compare(rhs) < 0;
+}
+
+bool Movie::operator<=(const Movie &rhs) {
+    return this->compare(rhs) <= 0;
 }

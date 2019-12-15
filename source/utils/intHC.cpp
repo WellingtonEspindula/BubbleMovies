@@ -12,7 +12,7 @@ IntHC::IntHC(int i){
     this->i = i;
 }
 
-int IntHC::compare(IntHC element) {
+float IntHC::compare(IntHC element) {
     return this->i - element.i;
 }
 

@@ -1,8 +1,8 @@
 ############################# Makefile ##########################
 all: bubblemovies
-bubblemovies: tst.o movie.o rating.o user.o tag.o stringHashable.o intHC.o utils.o main.o
+bubblemovies: tst.o movie.o rating.o user.o tag.o stringHashable.o intHC.o utils.o api.o main.o
 		# O compilador faz a ligação entre os dois objetos
-		g++ -o bubblemovies Debug/datastructures/tst.o Debug/model/movie.o Debug/model/rating.o Debug/model/user.o Debug/model/tag.o Debug/utils/stringHashable.o Debug/utils/intHC.o Debug/utils/utils.o Debug/main.o -g -O3 -std=c++17
+		g++ -o bubblemovies Debug/datastructures/tst.o Debug/model/movie.o Debug/model/rating.o Debug/model/user.o Debug/model/tag.o Debug/utils/stringHashable.o Debug/utils/intHC.o Debug/utils/utils.o Debug/api.o Debug/main.o -g -O3 -std=c++17
 
 #interfaces
 # comparable.o:
@@ -34,6 +34,10 @@ intHC.o:
 
 utils.o:
 		g++ -o Debug/utils/utils.o -c source/utils/utils.cpp -W -Wall -pedantic -g -O3 -std=c++17
+
+#api and main
+api.o:
+		g++ -o Debug/api.o -c source/api.cpp -W -Wall -pedantic -g -O3 -std=c++17
 
 main.o:
 		g++ -o Debug/main.o -c source/main.cpp -W -Wall -pedantic -g -O3 -std=c++17
