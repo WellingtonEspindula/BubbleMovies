@@ -206,7 +206,7 @@ int main(int argc, char ** argv){
         getline(cin, query);
 
         // Query treatment
-        vector<string> query_segments = split(query, " ");
+        vector<string> query_segments = split_query(query, ' ');
         string op = query_segments.at(0);
         if (op == "movie"){
             // TODO search on Movie Trie
@@ -230,27 +230,37 @@ int main(int argc, char ** argv){
             // TODO
 
         } else if (op == "tags"){
-            list<int> *moviesIds = tagHT->get(StringHashable(query_segments.at(1)));
-            list<Movie*> selected_movies;
+            list<int> *moviesIds = tagHT->get(StringHashable(clear_string(query_segments.at(1))));
+            list<int> selected_movies;
 
-            for (int movieId : *moviesIds){
-                Movie *movie = movieHT->get(IntHC(movieId));
+            if (moviesIds != nullptr){
+                for (int movieId : *moviesIds){
+                    if (!contains(selected_movies, movieId)){
+                        bool movie_has_all_tags = true;
+                        for (int i = 1; i < query_segments.size(); i++){
+                            list<int> *anotherMoviesIds = tagHT->get(StringHashable(clear_string(query_segments.at(i))));
 
-                if (movie != nullptr){
-                    for (int i = 2; i < query_segments.size(); i++){
-                        // Basically, it runs for the movie to see if has all of tags
-                        if (!movie->hasGenre(clear_string(query_segments.at(i)))) {
-                            break;
+                            bool exists = false;
+                            if (anotherMoviesIds != nullptr){
+                                exists = contains(*anotherMoviesIds, movieId);
+                            }
+
+                            if (!exists){
+                                movie_has_all_tags = false;
+                                break;
+                            }
                         }
+                        // if exists in all tags
+                        if (movie_has_all_tags)
+                            selected_movies.push_back(movieId);
                     }
-                    selected_movies.push_back(movie);
-                } else  {
-                    alert("Movie was not found on database");
                 }
-            }
 
-            for (Movie *movie : selected_movies){
-                cout << movie->title << " " << movie->genres << " " << movie->globalRating() << " " << movie->ratings_count << endl;
+                for (int movieId : selected_movies){
+                    Movie *movie = movieHT->get(IntHC(movieId));
+                    cout << movie->movieId << " " << movie->title << " " << movie->globalRating() << " " << movie->ratings_count << endl;
+                }
+
             }
 
         } else if (op == "quit") {
