@@ -75,6 +75,8 @@ int main(int argc, char ** argv){
 */
 
     // PROJECT CODE
+
+    // LOADING DATA STRUCTURES
     clock_t start, end;
     start = clock();
 
@@ -201,21 +203,58 @@ int main(int argc, char ** argv){
     while (true){
         string query;
         cout << "\nQuery: ";
-        cin >> query;
+        getline(cin, query);
 
         // Query treatment
         vector<string> query_segments = split(query, " ");
         string op = query_segments.at(0);
         if (op == "movie"){
             // TODO search on Movie Trie
+            string title = query_segments.at(1);
+//            movi
+
         } else if (op == "user"){
-            // TODO
+            IntHC userId = IntHC((stoi(query_segments.at(1))));
+            User *user = userHT->get(userId);
+
+            if (user != nullptr){
+                for (auto *rating : user->ratings){
+                    Movie *movie = movieHT->get(IntHC(rating->movieId));
+                    cout << rating->rating << " " << movie->title << " " << movie->globalRating() << " " << movie->ratings_count << endl;
+                }
+            } else {
+                alert("User doesn't exists in database");
+            }
+
         } else if (op.find("top") != string::npos){
             // TODO
 
         } else if (op == "tags"){
-            // TODO
+            list<int> *moviesIds = tagHT->get(StringHashable(query_segments.at(1)));
+            list<Movie*> selected_movies;
 
+            for (int movieId : *moviesIds){
+                Movie *movie = movieHT->get(IntHC(movieId));
+
+                if (movie != nullptr){
+                    for (int i = 2; i < query_segments.size(); i++){
+                        // Basically, it runs for the movie to see if has all of tags
+                        if (!movie->hasGenre(clear_string(query_segments.at(i)))) {
+                            break;
+                        }
+                    }
+                    selected_movies.push_back(movie);
+                } else  {
+                    alert("Movie was not found on database");
+                }
+            }
+
+            for (Movie *movie : selected_movies){
+                cout << movie->title << " " << movie->genres << " " << movie->globalRating() << " " << movie->ratings_count << endl;
+            }
+
+        } else if (op == "quit") {
+            return 0;
         } else {
             alert("Operation not found!\nHelp commands:\n- movie <title or prefix>\n- user <userID>\n- top<N> '<genre>'\n- tags <list of tags>");
         }

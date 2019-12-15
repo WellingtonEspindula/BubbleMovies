@@ -35,6 +35,8 @@ class Movie {
         Movie(int movieId, string title, int ratings_count, unsigned long long int ratings_sum);
         void addGenres(string genre);
         void addRating(Rating* rating);
+        float globalRating();
+        bool hasGenre(string genre);
         void fromCsv(string csv);
         friend ostream& operator<<(ostream& os, const Movie& dt);
 };

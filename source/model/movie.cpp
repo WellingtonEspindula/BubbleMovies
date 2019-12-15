@@ -44,3 +44,16 @@ void Movie::fromCsv(string movie_csv) {
 ostream& operator<<(ostream& os, const Movie& dt){
     return os << dt.title;
 }
+
+float Movie::globalRating() {
+    return ratings_sum/ratings_count;
+}
+
+bool Movie::hasGenre(string genre){
+    for (string movie_genre : genres){
+        if (clear_string(movie_genre) == genre){
+            return true;
+        }
+    }
+    return false;
+}
