@@ -1,58 +1,6 @@
-#ifndef LIBS
-#define LIBS
-#include <algorithm>
-#include <bits/stdc++.h>
-#endif
-
-#ifndef MODELS
-#define MODELS
-#include "../header/model/rating.h"
-#include "../header/model/user.h"
-#include "../header/model/movie.h"
-#include "../header/model/tag.h"
-#endif
-
-#ifndef INTERFACES
-#define INTERFACES
-#include "../header/interfaces/comparable.h"
-#include "../header/interfaces/hashable.h"
-#endif
-
-#ifndef UTILS
-#define UTILS
-#include "../header/utils/stringHashable.h"
-#include "../header/utils/utils.h"
-#endif
-
-#ifndef DATASTRUCTURES
-#define DATASTRUCTURES
-#include "../header/datastructures/hash.h"
-#include "../header/datastructures/tst.h"
-#endif
-
-
-#define MOVIE_HASH_SIZE 6997
-#define GENRES_HASH_SIZE 41
-#define USER_HASH_SIZE 140009
-#define TAG_HASH_SIZE 140009
-
-
-#define M_CHAINING 2477
-#define M_EABQ 20123
+#include "../header/api.h"
 
 using namespace std;
-
-// prototypes
-vector<pair<string, string>> readFileToPairVector(string fileName);
-vector<vector<int>> readFileToVectors(string fileName);
-vector<string> readFileToStringVector(string fileName);
-void writeList(string fileName, vector<vector<int>> list);
-void writeList(string fileName, vector<string> list);
-void writeStats(string fileName, vector<string> strings, double time);
-
-void alert(string msg){
-    cout << msg << endl;
-}
 
 int main(int argc, char ** argv){
 //        TESTING SCRIPT OF CSV TRANSCRIPT
@@ -77,197 +25,21 @@ int main(int argc, char ** argv){
     // PROJECT CODE
 
     // LOADING DATA STRUCTURES
-    clock_t start, end;
-    start = clock();
 
-     // Need 3 args to start the program
-     if (argc < 3){
-         alert("Missing arguments.\nEx.: ./bubblemovies movies.csv rating.csv tag.csv\n");
-         return EXIT_FAILURE;
-     }
-
-    // Populate Movie HashTable
-    HashTable<IntHC, Movie> *movieHT = new HashTable<IntHC, Movie>(MOVIE_HASH_SIZE);
-    TST *movieTST = new TST();
-    auto *genres = new HashTable<StringHashable, vector<int>>(GENRES_HASH_SIZE);
-
-    ifstream file = ifstream(argv[1]);
-    if (file.is_open()) {
-        string word;                   // line buffer
-        getline(file, word);    // jumps the first line
-        while (!file.eof()) {
-            getline(file, word);    // get the line
-
-            if (word.length() != 0) {
-                Movie *movie = new Movie(word); // create a Movie based on csv line
-                IntHC movieId = IntHC(movie->movieId);  // id hashable and comparable
-
-                movieHT->insert(movieId, movie);
-                for (string genre : movie->genres){
-                    StringHashable genreSH(clear_string(genre));
-                    vector<int> *genreFromHT = genres->get(genreSH);
-
-                    if (genreFromHT == nullptr){
-                        genreFromHT = new vector<int>();
-                        genreFromHT->push_back(movie->movieId);
-                    } else {
-                        genreFromHT->push_back(movie->movieId);
-                    }
-                    genres->insert(genreSH, genreFromHT);
-                }
-                movieTST->insert(movie->title, movie->movieId);
-            }
-        }
-        file.close();
+    // Need 3 args to start the program
+    if (argc < 3){
+        alert("Missing arguments.\nEx.: ./bubblemovies movies.csv rating.csv tag.csv\n");
+        return EXIT_FAILURE;
     }
-    movieHT->show_info();
-    movieTST->show_info();
-    genres->show_info();
-
-    // Populate User HashTable
-    auto *userHT = new HashTable<IntHC, User>(USER_HASH_SIZE);
-
-    file = ifstream(argv[2]);
-    if (file.is_open()){
-        string word;
-        getline(file, word);
-        while(!file.eof()) {
-            getline(file, word);
-            if (word.length() != 0) {
-                // Here we populate the User on UserHT
-                Rating *rating = new Rating(word);
-                IntHC userId = IntHC(rating->userId);
-
-                // verify if the user already exists
-                User *user = userHT->get(userId);
-                if (user != nullptr){
-                    user->addRating(rating);
-                    userHT->insert(userId, user);
-                } else {
-                    user = new User(userId.i);
-                    user->addRating(rating);
-                    userHT->insert(userId, user);
-                }
-
-                // verify if the movie exists
-                Movie *movie = movieHT->get(rating->movieId);
-                if (movie != nullptr){
-                    movie->addRating(rating);
-                    movieHT->insert(movie->movieId, movie);
-                } else {
-                    cout << "Movie doesn't exists on Movie HashTable" << endl;
-                }
-            }
-        }
-        file.close();
-    }
-    // show info
-    userHT->show_info();
-
-    // Populate Tag HashTable
-    auto *tagHT = new HashTable<StringHashable, list<int>>(TAG_HASH_SIZE);
-
-    file = ifstream(argv[3]);
-    if (file.is_open()){
-        string word;
-        getline(file, word);
-        while(!file.eof()) {
-            getline(file, word);
-            if (word.length() != 0) {
-                // Here we populate the Tag on TagHT
-                Tag *tag = new Tag(word);
-                StringHashable stringTag = StringHashable(tag->tag);
-
-                // verify if the movie already exists
-                list<int> *moviesPerTag = tagHT->get(stringTag);
-                if (moviesPerTag != nullptr){
-                    moviesPerTag->push_back(tag->movieId);
-                    tagHT->insert(stringTag, moviesPerTag);
-                } else {
-                    moviesPerTag = new list<int>();
-                    moviesPerTag->push_back(tag->movieId);
-                    tagHT->insert(stringTag, moviesPerTag);
-                }
-            }
-        }
-        file.close();
-    }
-    // show info
-    tagHT->show_info();
-
-    end = clock();
-    double time = (end - start)/(double)CLOCKS_PER_SEC;
-    cout << "Time elapsed: " << time << " s" << endl;
+    structures_handler structures = load(argv[1], argv[2], argv[3]);
 
 
     while (true){
-        string query;
+        string query_str;
         cout << "\nQuery: ";
-        getline(cin, query);
+        getline(cin, query_str);
 
-        // Query treatment
-        vector<string> query_segments = split_query(query, ' ');
-        string op = query_segments.at(0);
-        if (op == "movie"){
-            // TODO search on Movie Trie
-            string title = query_segments.at(1);
-//            movi
-
-        } else if (op == "user"){
-            IntHC userId = IntHC((stoi(query_segments.at(1))));
-            User *user = userHT->get(userId);
-
-            if (user != nullptr){
-                for (auto *rating : user->ratings){
-                    Movie *movie = movieHT->get(IntHC(rating->movieId));
-                    cout << rating->rating << " " << movie->title << " " << movie->globalRating() << " " << movie->ratings_count << endl;
-                }
-            } else {
-                alert("User doesn't exists in database");
-            }
-
-        } else if (op.find("top") != string::npos){
-            // TODO
-
-        } else if (op == "tags"){
-            list<int> *moviesIds = tagHT->get(StringHashable(clear_string(query_segments.at(1))));
-            list<int> selected_movies;
-
-            if (moviesIds != nullptr){
-                for (int movieId : *moviesIds){
-                    if (!contains(selected_movies, movieId)){
-                        bool movie_has_all_tags = true;
-                        for (int i = 1; i < query_segments.size(); i++){
-                            list<int> *anotherMoviesIds = tagHT->get(StringHashable(clear_string(query_segments.at(i))));
-
-                            bool exists = false;
-                            if (anotherMoviesIds != nullptr){
-                                exists = contains(*anotherMoviesIds, movieId);
-                            }
-
-                            if (!exists){
-                                movie_has_all_tags = false;
-                                break;
-                            }
-                        }
-                        // if exists in all tags
-                        if (movie_has_all_tags)
-                            selected_movies.push_back(movieId);
-                    }
-                }
-
-                for (int movieId : selected_movies){
-                    Movie *movie = movieHT->get(IntHC(movieId));
-                    cout << movie->movieId << " " << movie->title << " " << movie->globalRating() << " " << movie->ratings_count << endl;
-                }
-
-            }
-
-        } else if (op == "quit") {
-            return 0;
-        } else {
-            alert("Operation not found!\nHelp commands:\n- movie <title or prefix>\n- user <userID>\n- top<N> '<genre>'\n- tags <list of tags>");
-        }
+        query(structures, query_str);
     }
 
 

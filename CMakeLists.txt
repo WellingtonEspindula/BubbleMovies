@@ -28,4 +28,4 @@ add_executable(Bubble_Movies
         source/model/user.cpp
         source/utils/utils.cpp
         source/main.cpp
-        header/utils/intHC.h source/utils/intHC.cpp header/model/tag.h source/model/tag.cpp)
+        header/utils/intHC.h source/utils/intHC.cpp header/model/tag.h source/model/tag.cpp source/api.cpp header/api.h)
