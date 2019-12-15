@@ -77,6 +77,9 @@ structures_handler load(string movie_file, string ratings_file, string tag_file)
                 Rating *rating = new Rating(word);
                 IntHC userId = IntHC(rating->userId);
 
+                // TOOO REMOVE test
+//                cout << movieHT->get(rating->movieId)->title << ";" << rating->userId << ";" << rating->rating << ";" << rating->timestamp << endl;
+
                 // verify if the user already exists
                 User *user = userHT->get(userId);
                 if (user != nullptr){
@@ -173,22 +176,26 @@ void user_query(vector<string> query_segments, HashTable<IntHC, User> *userHT, H
 void top_genre_query(vector<string> query_segments, int n, HashTable<StringHashable, vector<Movie*>> *genres, HashTable<IntHC, Movie> *movieHT){
     StringHashable genre = StringHashable(clear_string(query_segments.at(1)));
     vector<Movie*> *movies = genres->get(genre);
-    vector<Movie*> movies_cleaned;
+    if (movies != nullptr) {
+        vector<Movie *> movies_cleaned;
 //    printf("%d", movies->end());
-    // Keep Movies with, at least, 1000 rating
-    for (Movie *movie : (*movies)){
-        if (movie->ratings_count >= 1000)
-            movies_cleaned.push_back(movie);
+        // Keep Movies with, at least, 1000 rating
+        for (Movie *movie : (*movies)) {
+            if (movie->ratings_count >= 1000) {
+                movies_cleaned.push_back(movie);
+            }
+        }
+
+        hybrid_sort<Movie>(&movies_cleaned[0], movies_cleaned.size());
+
+        for (int i = 0; ((i < n) && (i < movies_cleaned.size())); i++){
+            Movie *movie = movies_cleaned.at(i);
+            cout << movie->title << " " << movie->globalRating() << endl;
+        }
+    } else {
+        alert(genre+" not found in database");
     }
 
-    insertion_sort<Movie>(&movies_cleaned[0], movies_cleaned.size());
-
-    cout << "SORTED LIST: " << endl;
-    for (int i = 0; i < n; i++){
-        Movie *movie = movies_cleaned.at(i);
-        cout << movie->title << " " << movie->globalRating() << endl;
-    }
-    // TODO
 }
 
 void tag_query(vector<string> query_segments, HashTable<StringHashable, list<int>> *tagHT, HashTable<IntHC, Movie> *movieHT){

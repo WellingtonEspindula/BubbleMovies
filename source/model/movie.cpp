@@ -13,10 +13,13 @@ Movie::Movie(){
 }
 
 Movie::Movie(string csv){
+    this->genres = vector<string>();
+    this->ratings_count = 0;
+    this->ratings_sum = 0;
     fromCsv(csv);
 }
 
-Movie::Movie(int movieId, string title, int ratings_count, unsigned long long int ratings_sum){
+Movie::Movie(int movieId, string title, int ratings_count, float ratings_sum){
     this->movieId = movieId;
     this->title = title;
     this->genres = vector<string>();

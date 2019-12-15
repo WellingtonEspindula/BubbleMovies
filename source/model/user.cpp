@@ -5,6 +5,7 @@ using namespace std;
 
 User::User(int userId) {
     this->userId = userId;
+    this->ratings = list<Rating*>();
 }
 
 void User::addRating(Rating* rating) {

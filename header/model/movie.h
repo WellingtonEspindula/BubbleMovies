@@ -39,7 +39,7 @@ class Movie : Comparable<Movie> {
     public:
         Movie();
         Movie(string csv);
-        Movie(int movieId, string title, int ratings_count, unsigned long long int ratings_sum);
+        Movie(int movieId, string title, int ratings_count, float ratings_sum);
         void addGenres(string genre);
         void addRating(Rating* rating);
         float globalRating();
