@@ -7,6 +7,23 @@ TST::TST() {
     this->root = NULL;
 }
 
+void DeleteTST(Node *root)
+{
+    Node *tmp = root;
+    if (tmp)
+    {
+        DeleteTST(tmp->left);
+        DeleteTST(tmp->eq);
+        DeleteTST(tmp->right);
+        delete tmp;
+    }
+}
+
+TST::~TST() {
+    DeleteTST(this->root);
+}
+
+
 Node* Insert_Movie(Node* root, string str, int id, int d){
     if (root == NULL){
         root = new Node();
@@ -83,7 +100,7 @@ void Aux_Function(Node *root, char *buffer, int depth) {
         //Once end of string flag is encountered, print the string
         if (root->id != -1) {
             buffer[depth + 1] = '\0';
-            cout << buffer << ":" << root->id << endl;
+//            cout << buffer << ":" << root->id << endl;
         }
 
         // Traverse the middle subtree
@@ -117,4 +134,93 @@ bool TST::exists(string str) {
 int TST::get(string str){
     str = clear_string(str);
     return Search_For(this->root, str);
+}
+
+vector<pair<string, int>> vec;
+void Prefix_Aux2(Node* root, string prefix, char* buffer, int depth, vector<pair<string, int>> *results)
+{
+
+    if (root)
+    {
+        // Traverse the left subtree
+        Prefix_Aux2(root->left, prefix, buffer, depth, results);
+
+        buffer[depth] = root->character;
+        //Once end of string flag is encountered, print the string
+        if (root->id != -1)
+        {
+            buffer[depth + 1] = '\0';
+            string result = prefix + buffer;
+            results->push_back(pair<string, int>(result, root->id));
+        }
+
+        // Traverse the middle subtree
+        Prefix_Aux2(root->eq, prefix, buffer, depth + 1, results);
+
+        // Traverse the right subtree
+        Prefix_Aux2(root->right, prefix, buffer, depth, results);
+    }
+
+//int k = vec.size();
+//cout <<"there are" << k << "elements in the vector" << endl;
+}
+
+void Prefix_Aux(Node* root, string prefix, vector<pair<string, int>> *results)
+{
+
+    char buffer[MAX_LEN];
+    Prefix_Aux2(root, prefix, buffer, 0, results);
+
+    int k = vec.size();
+    cout <<"there are " << k << " elements in the vector" << endl;
+    //cout << prefix << endl;
+
+/*    for (int i = 0 ; i < k ; i++)
+    {
+        string result = prefix + vec.at(i);
+//cout << result << endl;
+        vec.at(i) = result;
+    }*/
+
+}
+
+void Search_Prefix (Node *root , string prefix, vector<pair<string, int>> *results)
+{
+    int d = 0;
+    while (root != NULL)
+    {
+
+        //Searches for the character in the tree
+        //Checks if the character's value is greater than the value stored in this node
+        if (prefix.at(d) < root->character)
+            root = root->left;
+
+        else if (prefix.at(d) == root->character)
+        {
+            //If end of string flag is found and the pattern length is also exhausted,
+            //we can safely say that the pattern is present in the TST
+            if (d == (prefix.length() - 1)){
+                if (root->id != -1){
+                    results->push_back(pair<string, int>(prefix, root->id));
+                }
+                char buffer[MAX_LEN];
+                Prefix_Aux2(root->eq, prefix, buffer, 0, results);
+                break;
+            }
+
+            d++;
+            root = root->eq;
+        }
+        else
+            root = root->right;
+    }
+}
+
+vector<pair<string, int>> TST::search(string pattern){
+    vector<pair<string, int>> *results = new vector<pair<string, int>>();
+    Search_Prefix(this->root, clear_string(pattern), results);
+    for (pair<string, int> result : *results){
+
+    }
+    return *results;
 }

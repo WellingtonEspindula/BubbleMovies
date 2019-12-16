@@ -39,6 +39,9 @@ public:
     /** \brief Default constructor */
     TST();
 
+    /** \brief Default destructor */
+    ~TST();
+
     /** \brief Inserts the name of the movie in the TST
      * \param str - string to be inserted
      */
