@@ -2,7 +2,7 @@
 all: bubblemovies
 bubblemovies: tst.o movie.o rating.o user.o tag.o stringHashable.o intHC.o utils.o api.o main.o
 		# O compilador faz a ligação entre os dois objetos
-		g++ -o bubblemovies Debug/datastructures/tst.o Debug/model/movie.o Debug/model/rating.o Debug/model/user.o Debug/model/tag.o Debug/utils/stringHashable.o Debug/utils/intHC.o Debug/utils/utils.o Debug/api.o Debug/main.o -g -O3 -std=c++17
+		g++ -o bubblemovies.exe Debug/datastructures/tst.o Debug/model/movie.o Debug/model/rating.o Debug/model/user.o Debug/model/tag.o Debug/utils/stringHashable.o Debug/utils/intHC.o Debug/utils/utils.o Debug/api.o Debug/main.o -g -O3 -std=c++17
 
 #interfaces
 # comparable.o:

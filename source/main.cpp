@@ -9,7 +9,7 @@ int main(int argc, char ** argv){
 //        cout << s << endl;
 
 // TESTING TST
-    TST *testTST = new TST();
+/*    TST *testTST = new TST();
     testTST->insert("abcd", 3);
     testTST->insert("oii", 2);
     testTST->insert("a", 10);
@@ -22,7 +22,7 @@ int main(int argc, char ** argv){
     vector<pair<string, int>> search = testTST->search("o");
     for (pair<string, int> somepair : search)
         cout << somepair.first << " " << somepair.second << endl;
-    return 0;
+    return 0;*/
 
    /* Movie *movieTst = new Movie();
     movieTst->movieId = 1;

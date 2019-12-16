@@ -153,10 +153,14 @@ structures_handler load(string movie_file, string ratings_file, string tag_file)
     return structuresHandler;
 }
 
-void movie_query(vector<string> query_segments, TST *movieTST, HashTable<IntHC, Movie> *movieHT){
-    // TODO search on Movie Trie
-    string title = query_segments.at(1);
-//            movi
+void movie_query(string movie_string_pref, TST *movieTST, HashTable<IntHC, Movie> *movieHT){
+    vector<pair<string, int>> movies = movieTST->search(movie_string_pref);
+
+    for (pair<string, int> movie_pair : movies){
+        Movie *movie = movieHT->get(IntHC(movie_pair.second));
+        cout << movie->movieId << " " << movie->title << " " << movie->globalRating() << endl;
+    }
+
 }
 
 void user_query(vector<string> query_segments, HashTable<IntHC, User> *userHT, HashTable<IntHC, Movie> *movieHT){
@@ -238,7 +242,8 @@ void query(structures_handler structures, string query){
     vector<string> query_segments = split_query(query, ' ');
     string op = query_segments.at(0);
     if (op == "movie"){
-        movie_query(query_segments, structures.movieTST, structures.movieHT);
+        string movie_string_pref = query.substr(query.find(" ")+1);
+        movie_query(movie_string_pref, structures.movieTST, structures.movieHT);
 
     } else if (op == "user"){
         user_query(query_segments, structures.userHT, structures.movieHT);
