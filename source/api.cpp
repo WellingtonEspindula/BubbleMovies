@@ -14,8 +14,9 @@ void log(string log_msg){
 }
 
 void alert(string msg){
-    // TODO FILL WITH QT ALERT
-    cout << msg << endl;
+    QMessageBox msgBox;
+    msgBox.setText(QString::fromStdString(msg));
+    msgBox.exec();
 }
 
 structures_handler load(string movie_file, string ratings_file, string tag_file){
@@ -55,6 +56,8 @@ structures_handler load(string movie_file, string ratings_file, string tag_file)
             }
         }
         file.close();
+    } else {
+        cout << "Problems occurred" << endl;
     }
 //    movieHT->show_info();
 //    movieTST->show_info();
@@ -158,7 +161,7 @@ void movie_query(string movie_string_pref, TST *movieTST, HashTable<IntHC, Movie
 
     for (pair<string, int> movie_pair : movies){
         Movie *movie = movieHT->get(IntHC(movie_pair.second));
-        cout << movie->movieId << " " << movie->title << " " << movie->globalRating() << endl;
+        cout << movie->movieId << " " << movie->title << " " << movie->getGenres() << " " << movie->globalRating() << " " << movie->ratings_count << endl;
     }
 
 }
@@ -194,7 +197,7 @@ void top_genre_query(vector<string> query_segments, int n, HashTable<StringHasha
 
         for (int i = 0; ((i < n) && (i < movies_cleaned.size())); i++){
             Movie *movie = movies_cleaned.at(i);
-            cout << movie->title << " " << movie->globalRating() << endl;
+            cout << movie->title << " " << " " << movie->getGenres() << " " << movie->globalRating() << " " << movie->ratings_count << endl;
         }
     } else {
         alert(genre+" not found in database");
@@ -231,13 +234,14 @@ void tag_query(vector<string> query_segments, HashTable<StringHashable, list<int
 
         for (int movieId : selected_movies){
             Movie *movie = movieHT->get(IntHC(movieId));
-            cout << movie->movieId << " " << movie->title << " " << movie->globalRating() << " " << movie->ratings_count << endl;
+            cout << movie->movieId << " " << movie->title        << " " << movie->getGenres() << " " << movie->globalRating() << " " << movie->ratings_count << endl;
         }
 
     }
 }
 
 void query(structures_handler structures, string query){
+
     // Query treatment
     vector<string> query_segments = split_query(query, ' ');
     string op = query_segments.at(0);
@@ -261,3 +265,30 @@ void query(structures_handler structures, string query){
         alert("Operation not found!\nHelp commands:\n- movie <title or prefix>\n- user <userID>\n- top<N> '<genre>'\n- tags <list of tags>");
     }
 }
+
+//void query(structures_handler structures, string query, MainWind *windows_relative){
+//    windows_relative->("aaaa");
+////    // Query treatment
+////    vector<string> query_segments = split_query(query, ' ');
+////    string op = query_segments.at(0);
+////    if (op == "movie"){
+////        string movie_string_pref = query.substr(query.find(" ")+1);
+////        movie_query(movie_string_pref, structures.movieTST, structures.movieHT);
+
+////    } else if (op == "user"){
+////        user_query(query_segments, structures.userHT, structures.movieHT);
+
+////    } else if (op.find("top") != string::npos){
+////        int top_n = stoi(op.substr(op.find("top")+3));
+////        top_genre_query(query_segments, top_n, structures.genres, structures.movieHT);
+
+////    } else if (op == "tags"){
+////        tag_query(query_segments, structures.tagHT, structures.movieHT);
+
+////    } else if (op == "quit") {
+////        exit(EXIT_SUCCESS);
+////    } else {
+////        alert("Operation not found!\nHelp commands:\n- movie <title or prefix>\n- user <userID>\n- top<N> '<genre>'\n- tags <list of tags>");
+////    }
+//}
+

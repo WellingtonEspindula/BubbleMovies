@@ -136,14 +136,11 @@ int TST::get(string str){
     return Search_For(this->root, str);
 }
 
-vector<pair<string, int>> vec;
-void Prefix_Aux2(Node* root, string prefix, char* buffer, int depth, vector<pair<string, int>> *results)
-{
-
+void Prefix_Aux(Node* root, string prefix, char* buffer, int depth, vector<pair<string, int>> *results){
     if (root)
     {
         // Traverse the left subtree
-        Prefix_Aux2(root->left, prefix, buffer, depth, results);
+        Prefix_Aux(root->left, prefix, buffer, depth, results);
 
         buffer[depth] = root->character;
         //Once end of string flag is encountered, print the string
@@ -155,36 +152,15 @@ void Prefix_Aux2(Node* root, string prefix, char* buffer, int depth, vector<pair
         }
 
         // Traverse the middle subtree
-        Prefix_Aux2(root->eq, prefix, buffer, depth + 1, results);
+        Prefix_Aux(root->eq, prefix, buffer, depth + 1, results);
 
         // Traverse the right subtree
-        Prefix_Aux2(root->right, prefix, buffer, depth, results);
+        Prefix_Aux(root->right, prefix, buffer, depth, results);
     }
-
-//int k = vec.size();
-//cout <<"there are" << k << "elements in the vector" << endl;
 }
 
-void Prefix_Aux(Node* root, string prefix, vector<pair<string, int>> *results)
-{
 
-    char buffer[MAX_LEN];
-    Prefix_Aux2(root, prefix, buffer, 0, results);
-
-    int k = vec.size();
-    cout <<"there are " << k << " elements in the vector" << endl;
-    //cout << prefix << endl;
-
-/*    for (int i = 0 ; i < k ; i++)
-    {
-        string result = prefix + vec.at(i);
-//cout << result << endl;
-        vec.at(i) = result;
-    }*/
-
-}
-
-void Search_Prefix (Node *root , string prefix, vector<pair<string, int>> *results)
+void Search_Prefix(Node *root , string prefix, vector<pair<string, int>> *results)
 {
     int d = 0;
     while (root != NULL)
@@ -204,7 +180,7 @@ void Search_Prefix (Node *root , string prefix, vector<pair<string, int>> *resul
                     results->push_back(pair<string, int>(prefix, root->id));
                 }
                 char buffer[MAX_LEN];
-                Prefix_Aux2(root->eq, prefix, buffer, 0, results);
+                Prefix_Aux(root->eq, prefix, buffer, 0, results);
                 break;
             }
 
@@ -219,8 +195,5 @@ void Search_Prefix (Node *root , string prefix, vector<pair<string, int>> *resul
 vector<pair<string, int>> TST::search(string pattern){
     vector<pair<string, int>> *results = new vector<pair<string, int>>();
     Search_Prefix(this->root, clear_string(pattern), results);
-    for (pair<string, int> result : *results){
-
-    }
     return *results;
 }

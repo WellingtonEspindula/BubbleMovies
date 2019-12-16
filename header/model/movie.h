@@ -44,6 +44,7 @@ class Movie : Comparable<Movie> {
         void addRating(Rating* rating);
         float globalRating();
         bool hasGenre(string genre);
+        string getGenres();
         void fromCsv(string csv);
         float compare(Movie element) override ;
         friend ostream& operator<<(ostream& os, const Movie& dt);

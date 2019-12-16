@@ -61,6 +61,15 @@ bool Movie::hasGenre(string genre){
     return false;
 }
 
+string Movie::getGenres(){
+    string buffer = "";
+    for (string genre : this->genres){
+        buffer += genre + "|";
+    }
+    buffer.pop_back();
+    return buffer;
+}
+
 float Movie::compare(Movie element) {
     // TODO Maybe improve this method later
     return this->globalRating() - element.globalRating();

@@ -1,3 +1,5 @@
+#include "../header/mainwindow.h"
+#include <QApplication>
 #include "../header/api.h"
 
 using namespace std;
@@ -59,14 +61,21 @@ int main(int argc, char ** argv){
     // LOADING DATA STRUCTURES
     structures_handler structures = load(argv[1], argv[2], argv[3]);
 
-    // QUERIES
-    while (true){
-        string query_str;
-        cout << "\nQuery: ";
-        getline(cin, query_str);
+    // LOAD QT APPLICATION WINDOW
+    QApplication a(argc, argv);
+    MainWindow w(nullptr, &structures);
+    w.show();
 
-        query(structures, query_str);
-    }
+    return a.exec();
+
+    // QUERIES
+//    while (true){
+//        string query_str;
+//        cout << "\nQuery: ";
+//        getline(cin, query_str);
+
+//        query(structures, query_str);
+//    }
 
 
 //     cout << hashTable->get((string) "Reign") << endl;

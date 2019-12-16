@@ -2,6 +2,15 @@
 // Created by wellington on 15/12/2019.
 //
 
+
+#ifndef QT_GUI
+#define QT_GUI
+#include <QDebug>
+#include <QMessageBox>
+#include <QStandardItem>
+#include <QMainWindow>
+#endif
+
 #ifndef LIBS
 #define LIBS
 #include <algorithm>
