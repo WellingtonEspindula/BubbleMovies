@@ -1,0 +1,4 @@
+/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Bubble_Movies"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Quick\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Bubble_Movies">
+				<Option output="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NO_DEBUG"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_QUICK_LIB"/>
+					<Add option="-DQT_QML_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen/include"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtQuick"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtQml"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 Bubble_Movies"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Bubble_Movies/fast">
+				<Option output="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NO_DEBUG"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_QUICK_LIB"/>
+					<Add option="-DQT_QML_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen/include"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtQuick"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtQml"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 Bubble_Movies/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Bubble_Movies_autogen">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 Bubble_Movies_autogen"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen/mocs_compilation.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/api.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures/hash.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures/tst.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces/comparable.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces/hashable.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/mainwindow.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/movie.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/rating.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/tag.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/user.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/intHC.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/sort.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/stringHashable.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/utils.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/api.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/hash.ipp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/table.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/tst.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/main.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/mainwindow.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/mainwindow.ui">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/intHC.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/sort.ipp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/utils.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Quick/Qt5QuickConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Quick\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Quick/Qt5QuickConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Quick\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5QmlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5QmlConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5QmlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QDebugMessageServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QLocalClientConnectionFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlDebugServerFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlDebuggerServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlInspectorServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugConnectorFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlPreviewServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQmlProfilerServiceFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Qml\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
