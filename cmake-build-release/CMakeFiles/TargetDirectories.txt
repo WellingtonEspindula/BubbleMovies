@@ -1,0 +1,3 @@
+/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/CMakeFiles/Bubble_Movies.dir

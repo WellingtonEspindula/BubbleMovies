@@ -1,15 +1,15 @@
-#include "../../header/utils/stringHashable.h"
+#include "stringHashable.h"
 
 #define P 257
 
-StringHashable::StringHashable(){
+stringHC::stringHC(){
 }
 
-StringHashable::StringHashable(string s){
+stringHC::stringHC(string s){
     this->assign(s);
 }
 
-int StringHashable::hashCode(int table_size){
+int stringHC::hashCode(int table_size){
 //    cout << this->data() << " : " << table_size;
     int hash = 0;
     for (int i = 0; i < length(); i++){
@@ -19,10 +19,10 @@ int StringHashable::hashCode(int table_size){
     return hash;
 }
 
-float StringHashable::compare(StringHashable element) {
+float stringHC::compare(stringHC element) {
     return strcmp(this->c_str(), element.c_str());
 }
 
-bool StringHashable::operator==(const StringHashable& rhs){
+bool stringHC::operator==(const stringHC& rhs){
     return this->compare(rhs) == 0;
 }

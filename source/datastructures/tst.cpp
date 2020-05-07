@@ -1,4 +1,4 @@
-#include "../../header/datastructures/tst.h"
+#include "tst.h"
 
 #define MAX_LEN 1024
 

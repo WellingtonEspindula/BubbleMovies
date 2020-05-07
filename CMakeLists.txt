@@ -3,25 +3,24 @@ project(Bubble_Movies)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(header)
-include_directories(header/datastructures)
-include_directories(header/interfaces)
-include_directories(header/model)
-include_directories(header/utils)
+include_directories(source/datastructures)
+include_directories(source/interfaces)
+include_directories(source/model)
+include_directories(source/utils)
 include_directories(source)
 
 add_executable(Bubble_Movies
-        header/utils/intHC.h
-        header/utils/stringHashable.h
-        header/utils/sort.h
-        header/datastructures/hash.h
-        header/datastructures/tst.h
-        header/interfaces/comparable.h
-        header/interfaces/hashable.h
-        header/model/movie.h
-        header/model/rating.h
-        header/model/user.h
-        header/utils/utils.h
+        source/utils/intHC.h
+        source/utils/stringHashable.h
+        source/utils/sort.h
+        source/datastructures/hash.h
+        source/datastructures/tst.h
+        source/interfaces/comparable.h
+        source/interfaces/hashable.h
+        source/model/movie.h
+        source/model/rating.h
+        source/model/user.h
+        source/utils/utils.h
         source/utils/intHC.cpp
         source/utils/stringHashable.cpp
         source/utils/sort.ipp
@@ -31,5 +30,10 @@ add_executable(Bubble_Movies
         source/model/rating.cpp
         source/model/user.cpp
         source/utils/utils.cpp
-        source/main.cpp
-        header/utils/intHC.h source/utils/intHC.cpp header/model/tag.h source/model/tag.cpp source/api.cpp header/api.h)
+        source/utils/intHC.h
+        source/utils/intHC.cpp
+        source/model/tag.h
+        source/model/tag.cpp
+        source/api.cpp
+        source/api.h
+        source/main.cpp)

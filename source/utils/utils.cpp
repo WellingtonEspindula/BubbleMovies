@@ -1,13 +1,5 @@
-#ifndef LIBS
-#define LIBS
-#include <algorithm>
-#include <bits/stdc++.h>
-#endif
 
-#ifndef UTILS
-#define UTILS
-#include "../../header/utils/utils.h"
-#endif
+#include "utils.h"
 
 using namespace std;
 
@@ -105,14 +97,6 @@ double benchmark(void(*f_sort)(string[] , int), string input[], int N , char* na
     end = clock();
 
     time = (end - start)/(double)CLOCKS_PER_SEC;
-
-/*     if (!is_sorted(input,N)){
-       fprintf(stderr,"ERROR in %s\n",name);
-       return -1;
-    } */
-/*     else{
-       printf("%s;%d;%f\n", name, N, time);
-    } */
 
     if ( N < 100){
        printf("output: ");
@@ -276,6 +260,7 @@ string clear_string(string in){
 
     string new_str;
 
+    // Cleans special chars
     for (auto it = dictionary.begin(); it != dictionary.end(); it++){
         size_t index = 0;
         while (true) {
@@ -291,20 +276,23 @@ string clear_string(string in){
         }
     }
 
+    // Normalize the string
     for (char c : in){
-
+        // Upper case
         c = toupper(c);
 
+        // Gets only string in range A-Z and 0-9
         if ( ((c >= 'A') && (c <= 'Z')) || ((c >= '0') && (c <= '9')) ){
             new_str += c;
         }
 
+        // Remove duplicate spaces
         if ( (c == ' ') && (new_str.back() != ' ') ){
             new_str += c;
         }
-
     }
 
+    // Remove blank space in the end of the string
     if (new_str.back() == ' '){
         new_str.pop_back();
     }

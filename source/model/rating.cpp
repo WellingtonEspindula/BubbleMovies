@@ -1,4 +1,4 @@
-#include "../../header/model/rating.h"
+#include "rating.h"
 
 
 Rating::Rating(){

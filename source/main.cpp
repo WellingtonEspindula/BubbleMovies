@@ -1,4 +1,4 @@
-#include "../header/api.h"
+#include "api.h"
 
 using namespace std;
 
@@ -73,11 +73,11 @@ int main(int argc, char ** argv){
 //     cout << hashTable->get((string) "Maddelena") << endl;
 
 
-//    StringHashable* sh = new StringHashable("Abcd");
+//    stringHC* sh = new stringHC("Abcd");
 //    string s = "efgh";
-//    Test<StringHashable*, string> teste(sh, s);
+//    Test<stringHC*, string> teste(sh, s);
 //    cout << "Teste: " << teste.hashing() << endl;
-//    StringHashable* sh1 = new StringHashable("abcd");
+//    stringHC* sh1 = new stringHC("abcd");
 //    cout << "Teste: " << sh->compare(*sh1) << endl;
 
     // DEPRECATED

@@ -1,0 +1,39 @@
+
+#ifndef BUBBLE_MOVIES_SORT_H
+#define BUBBLE_MOVIES_SORT_H
+
+#include <algorithm>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+/** \brief Default Insertion Sort
+ *
+ *  \param vector - Input vector to be sorted
+ *  \param size - Size of the vector
+ */
+template <typename T>
+void insertion_sort(T* vector[], int size);
+
+/** \brief Default Top Down Merge Sort
+ *
+ *  \param vector - Input vector to be sorted
+ *  \param size - Size of the vector
+ */
+template <typename T>
+void merge_sort(T* vector[], int size);
+
+/** \brief Hybrid Sort is an Top Down Merge sort using, as optimization,
+ * Insertion Sort in some sublist
+ *
+ *  \param vector - Input vector to be sorted
+ *  \param size - Size of the vector
+ */
+template <typename T>
+void hybrid_sort(T* vector[], int size);
+
+
+
+#include "sort.ipp"
+
+#endif //BUBBLE_MOVIES_SORT_H

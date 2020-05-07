@@ -2,7 +2,7 @@
 // Created by wellington on 30/11/2019.
 //
 
-#include "../../header/utils/intHC.h"
+#include "intHC.h"
 #define K 31
 
 IntHC::IntHC(){

@@ -1,0 +1,204 @@
+{
+	"BUILD_DIR" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen",
+	"CMAKE_BINARY_DIR" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies",
+	"CMAKE_EXECUTABLE" : "/snap/clion/112/bin/cmake/linux/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies",
+	"HEADERS" : 
+	[
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/api.h",
+			"MU",
+			"6OFTS6FJJP/moc_api.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures/hash.h",
+			"MU",
+			"UYAE5EV4LX/moc_hash.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures/tst.h",
+			"MU",
+			"UYAE5EV4LX/moc_tst.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces/comparable.h",
+			"MU",
+			"Z67WE6ALQV/moc_comparable.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces/hashable.h",
+			"MU",
+			"Z67WE6ALQV/moc_hashable.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/mainwindow.h",
+			"MU",
+			"6OFTS6FJJP/moc_mainwindow.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/movie.h",
+			"MU",
+			"TN7J5R4UA3/moc_movie.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/rating.h",
+			"MU",
+			"TN7J5R4UA3/moc_rating.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/tag.h",
+			"MU",
+			"TN7J5R4UA3/moc_tag.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model/user.h",
+			"MU",
+			"TN7J5R4UA3/moc_user.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/intHC.h",
+			"MU",
+			"NHEVKBIJ6N/moc_intHC.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/sort.h",
+			"MU",
+			"NHEVKBIJ6N/moc_sort.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/stringHashable.h",
+			"MU",
+			"NHEVKBIJ6N/moc_stringHashable.cpp"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils/utils.h",
+			"MU",
+			"NHEVKBIJ6N/moc_utils.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/datastructures",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/interfaces",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/model",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/header/utils",
+		"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQuick",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQml",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/snap/clion/112/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 2,
+	"PARSE_CACHE_FILE" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/CMakeFiles/Bubble_Movies_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/CMakeFiles/Bubble_Movies_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/api.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/table.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/tst.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/main.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/mainwindow.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/intHC.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp",
+			"MU"
+		],
+		[
+			"/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/utils.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

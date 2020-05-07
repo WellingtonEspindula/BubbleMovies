@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Bubble_Movies"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Bubble_Movies">
+				<Option output="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/interfaces"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 Bubble_Movies"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Bubble_Movies/fast">
+				<Option output="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release/Bubble_Movies" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/interfaces"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils"/>
+					<Add directory="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 Bubble_Movies/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wmespindula/Área\ de\ trabalho/Projetos\ GITHUB/Graduacao/BubbleMovies/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/api.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/api.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/hash.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/hash.ipp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/tst.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/datastructures/tst.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/interfaces/comparable.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/interfaces/hashable.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/main.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/movie.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/rating.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/tag.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/model/user.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/intHC.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/intHC.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/sort.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/sort.ipp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/stringHashable.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/utils.cpp">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/source/utils/utils.h">
+			<Option target="Bubble_Movies"/>
+		</Unit>
+		<Unit filename="/home/wmespindula/Área de trabalho/Projetos GITHUB/Graduacao/BubbleMovies/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

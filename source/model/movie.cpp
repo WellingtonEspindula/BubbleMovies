@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 #endif
 
-#include "../../header/model/movie.h"
+#include "movie.h"
 
 Movie::Movie(){
     this->genres = vector<string>();
@@ -13,9 +13,7 @@ Movie::Movie(){
 }
 
 Movie::Movie(string csv){
-    this->genres = vector<string>();
-    this->ratings_count = 0;
-    this->ratings_sum = 0;
+    Movie();
     fromCsv(csv);
 }
 

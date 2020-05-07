@@ -2,7 +2,7 @@
 // Created by wellington on 07/12/2019.
 //
 
-#include "../../header/model/tag.h"
+#include "tag.h"
 
 Tag::Tag() {
     this->movieId = -1;
